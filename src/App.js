@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+import axios from 'axios';
 import './App.css';
 
 function App() {
@@ -8,6 +9,9 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
+          axios.get('/api/hello')
+            .then(response => console.log(response.data))
+            .catch(error => console.error(error));
         </p>
         <a
           className="App-link"
